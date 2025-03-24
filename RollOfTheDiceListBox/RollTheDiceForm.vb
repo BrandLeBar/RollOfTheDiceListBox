@@ -1,7 +1,7 @@
 ﻿'Brandon Barrera
 'RCET0265
 'Spring 2025
-'
+'https://github.com/BrandLeBar/RollOfTheDiceListBox.git
 
 Option Explicit On
 Option Strict On
@@ -27,12 +27,12 @@ Public Class RollTheDiceForm
 
     Sub Main()
         Dim rolls(12) As Integer
-        Dim columnWidth As Integer = 11
+        Dim columnWidth As Integer = 4
         Dim header As String
         Dim data As String
 
-        DisplayListBox.Items.Add("Roll of the Dice ".PadLeft(columnWidth * 9))
-        DisplayListBox.Items.Add(StrDup(columnWidth * 11, "_"))
+        DisplayListBox.Items.Add("Roll of the Dice ".PadLeft(columnWidth * 13))
+        DisplayListBox.Items.Add(StrDup(columnWidth * 22, "_"))
 
         For i = 1 To 1000
             rolls(RandomNumberGenerator(1, 12)) += 1
@@ -41,7 +41,7 @@ Public Class RollTheDiceForm
         DisplayListBox.Items.Add("")
 
         For i = 2 To UBound(rolls)
-            header &= (CStr(i).PadLeft(columnWidth + 1) & "   |")
+            header &= (CStr(i).PadLeft(columnWidth) & "   |")
         Next
 
         For i = 2 To UBound(rolls)
@@ -50,7 +50,7 @@ Public Class RollTheDiceForm
 
         DisplayListBox.Items.Add(header)
         DisplayListBox.Items.Add("")
-        DisplayListBox.Items.Add(StrDup(columnWidth * 11, "_"))
+        DisplayListBox.Items.Add(StrDup(columnWidth * 22, "_"))
         DisplayListBox.Items.Add("")
         DisplayListBox.Items.Add(data)
         DisplayListBox.Items.Add("")

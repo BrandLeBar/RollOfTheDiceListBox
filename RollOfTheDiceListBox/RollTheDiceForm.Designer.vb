@@ -30,11 +30,12 @@ Partial Class RollTheDiceForm
         '
         'DisplayListBox
         '
+        Me.DisplayListBox.Font = New System.Drawing.Font("Cascadia Mono", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DisplayListBox.FormattingEnabled = True
-        Me.DisplayListBox.ItemHeight = 16
+        Me.DisplayListBox.ItemHeight = 17
         Me.DisplayListBox.Location = New System.Drawing.Point(2, 3)
         Me.DisplayListBox.Name = "DisplayListBox"
-        Me.DisplayListBox.Size = New System.Drawing.Size(786, 308)
+        Me.DisplayListBox.Size = New System.Drawing.Size(786, 293)
         Me.DisplayListBox.TabIndex = 0
         '
         'RollButton
